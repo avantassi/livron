@@ -23,7 +23,6 @@ body {
   margin: 0;
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
-  background: url(../img/bg-pattern.jpg) center center repeat;
   color: #36322e;
 }
 
@@ -54,6 +53,7 @@ p {
 
 section {
   height: 100vh;
+  background: url(../img/section-bg.jpg) center center repeat;
 }
 
 .container {
@@ -475,6 +475,10 @@ section {
   background: #131118;
 }
 
+.hero__img {
+  display: none;
+}
+
 .pagination {
   position: fixed;
   left: 50px;
@@ -488,13 +492,17 @@ section {
   display: block;
   height: 25px;
   margin-bottom: 10px;
-  color: #00a2ff;
+  color: #757575;
   position: relative;
   padding: 4px;
 }
 
+.pagination a.active {
+  color: #00a2ff;
+}
+
 .pagination a.active:after {
-  box-shadow: inset 0 0 0 4px;
+  box-shadow: inset 0 0 0 4px #00a2ff;
 }
 
 .pagination a .hover-text {
@@ -600,11 +608,6 @@ section {
   background: none;
 }
 
-.str_wrap img {
-  width: 300px;
-  height: 300px;
-}
-
 .str__overlay {
   position: absolute;
   width: 100%;
@@ -664,6 +667,7 @@ section {
   font: 300 24px 'Open Sans';
   border-radius: 25px 0 0 25px;
   font-style: italic;
+  margin: 0;
 }
 
 .modal.is-open {
@@ -672,7 +676,7 @@ section {
 
 .dialog {
   box-sizing: border-box;
-  width: fit-content;
+  width: max-content;
   background: #ffffff;
   position: relative;
   left: 95%;
@@ -788,8 +792,16 @@ section {
   }
 
   .hero {
-    background: url(../img/hero-mobile.jpg) center center no-repeat;
-    background-size: cover;
+    background: #0e0d10;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 115px;
+  }
+
+  .hero__img {
+    display: block;
+    width: 100%;
+    margin: auto;
   }
 
   .part {
@@ -826,11 +838,6 @@ section {
     text-align: center;
     font-size: 18px;
     color: #c2c2c2;
-  }
-
-  .str_wrap img {
-    width: 175px;
-    height: 175px;
   }
 
   .map {

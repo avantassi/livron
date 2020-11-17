@@ -32,15 +32,10 @@
 		background: none;
 	}
 
-	img{
-		width: 300px;
-		height: 300px;
-
-		@include tablets{
-			width: 175px;
-			height: 175px;
-		}
-	}
+	// img{
+	// 	width: 150px;
+	// 	height: 150px;
+	// }
 }
 
 .str__overlay{
