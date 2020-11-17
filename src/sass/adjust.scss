@@ -1,0 +1,348 @@
+*{box-sizing: border-box;}
+
+html{
+  font-size: 16px;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  background: url(../img/bg-pattern.jpg) center center repeat;
+  color: $brown;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {list-style: none;}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+section{
+	height: 100vh;
+
+	@include tablets{
+		height: auto;
+	}
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 1170px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 0 15px;
+
+  &--row{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--height{
+	  height: 100%;
+  }
+}
+
+.wrapper{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+}
+
+.maincontent{
+  height: 100%;
+}
+
+.first-title{
+
+}
+
+.second-title{
+	color: $white;
+	padding: 50px 0 50px 130px;
+	border-radius: 100px 0 0 100px;
+	font-size: 40px;
+	line-height: 30px;
+	position: relative;
+	min-width: 670px;
+	text-align: right;
+
+	br{
+		display: none;
+
+		@include tablets{
+			display: block;
+		}
+	}
+
+	@include tablets{
+		padding: 40px 0 70px;
+		border-radius: 0;
+		min-width: auto;
+		width: 100%;
+		text-align: center;
+		font-size: 36px;
+		line-height: 45px;
+	}
+
+	&:after{
+		content: '';
+		position: absolute;
+		display: block;
+		width: 1000%;
+		height: 100%;
+		top: 0;
+		right: -1000%;
+
+		@include tablets{
+			right: -999%;
+		}
+	}
+
+	&--blue{
+		background: $blue-background;
+		background: $blue-background-rgba;
+
+		&:after{
+			background: rgba(11,100,146,1);
+		}
+	}
+
+	&--green{
+		background: $green-background;
+		background: $green-background-rgba;
+
+		&:after{
+			background: rgba(51,149,25,1);
+		}
+	}
+
+	&--violet{
+		background: $violet-background;
+		background: $violet-background-rgba;
+
+		&:after{
+			background: rgba(41,13,114,1);
+		}
+	}
+
+	&--darkblue{
+		background: $darkblue-background;
+		background: $darkblue-background-rgba;
+
+		&:after{
+			background: rgba(30,32,135,1);
+		}
+	}
+
+	&--red{
+		background: $red-background;
+		background: $red-background-rgba;
+
+		&:after{
+			background: rgba(160,30,13,1);
+		}
+	}
+
+	&--green2{
+		background: $green2-background;
+		background: $green2-background-rgba;
+
+		&:after{
+			background: rgba(1,150,92,1);
+		}
+	}
+
+	&--blue2{
+		background: $blue2-background;
+		background: $blue2-background-rgba;
+
+		&:after{
+			background: rgba(43,95,139,1);
+		}
+	}
+}
+
+.third-title{
+	color: $white;
+	text-transform: uppercase;
+	font-size: 24px;
+}
+
+.btn{
+	background-color: $white;
+	border-radius: 100px 0 0 100px;
+	padding: 25px 50px;
+	font-size: 24px;
+	line-height: 30px;
+	position: relative;
+	margin-top: 80px;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	transition: all .4s;
+	outline: none;;
+
+	&:after{
+		content: '';
+		position: absolute;
+		display: block;
+		background: $white;
+		width: 1000%;
+		height: 100%;
+		top: -1px;
+		right: -1000%;
+	}
+
+	&--blue{
+		border: 1px solid $blue-text;
+		color: $blue-text;
+
+		&:after{
+			border: 1px solid $blue-text;
+			border-left: none;
+		}
+	}
+
+	&--green{
+		border: 1px solid $green-text;
+		color: $green-text;
+
+		&:after{
+			border: 1px solid $green-text;
+			border-left: none;
+		}
+	}
+
+	&--violet{
+		border: 1px solid $violet-text;
+		color: $violet-text;
+
+		&:after{
+			border: 1px solid $violet-text;
+			border-left: none;
+		}
+	}
+
+	&--darkblue{
+		border: 1px solid $darkblue-text;
+		color: $darkblue-text;
+
+		&:after{
+			border: 1px solid $darkblue-text;
+			border-left: none;
+		}
+	}
+
+	&--red{
+		border: 1px solid $red-text;
+		color: $red-text;
+
+		&:after{
+			border: 1px solid $red-text;
+			border-left: none;
+		}
+	}
+
+	&--green2{
+		border: 1px solid $green2-text;
+		color: $green2-text;
+
+		&:after{
+			border: 1px solid $green2-text;
+			border-left: none;
+		}
+	}
+
+	&--blue2{
+		border: 1px solid $blue2-text;
+		color: $blue2-text;
+
+		&:after{
+			border: 1px solid $blue2-text;
+			border-left: none;
+		}
+	}
+
+	&:hover, &--blue:hover:after, &--green:hover:after, &--violet:hover:after, &--darkblue:hover:after, &--red:hover:after, 
+	&--green2:hover:after, &--blue2:hover:after{
+		color: #c2f2ff;
+		background-color: #121115;
+		border-color: #121115;
+	}
+
+	&--order{
+		margin-top: 0;
+		padding: 9px 0;
+		border: none;
+		border-radius: 100px;
+		color: $white;
+		font-size: 24px;
+		width: 350px;
+
+		&:after{
+			display: none;
+		}
+
+		&:hover{
+			background: $white;
+			color: $brown;
+		}
+	}
+
+	&--order-blue{
+		background: $blue-background;
+		background: $blue-background-rgba;
+	}
+
+	&--order-green{
+		background: $green-background;
+		background: $green-background-rgba;
+	}
+
+	&--order-violet{
+		background: $violet-background;
+		background: $violet-background-rgba;
+	}
+
+	&--order-darkblue{
+		background: $darkblue-background;
+		background: $darkblue-background-rgba;
+	}
+
+	&--order-red{
+		background: $red-background;
+		background: $red-background-rgba;
+	}
+
+	&--order-green2{
+		background: $green2-background;
+		background: $green2-background-rgba;
+	}
+
+	&--order-blue2{
+		background: $blue2-background;
+		background: $blue2-background-rgba;
+	}
+}

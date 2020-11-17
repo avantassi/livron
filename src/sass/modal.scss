@@ -1,0 +1,136 @@
+.is-open-modal {
+	overflow: hidden;
+}
+.modal {
+	box-sizing: border-box;
+	position: fixed;
+	z-index: 1000;
+	background: rgba(0,0,0, 0.2);
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding: 3rem;
+    display: none;
+    
+    &__input{
+        width: 420px;
+        border: none;
+        // background: $lightgray-bg;
+        padding: 9px 30px;
+        font-size: 24px;
+        color: #9b9b9b;
+        font-weight: 300;
+		font: 300 24px 'Open Sans';
+		border-radius: 25px 0 0 25px;
+		font-style: italic;
+    }
+}
+
+.modal.is-open {
+	display: block;
+}
+
+.dialog {
+	box-sizing: border-box;
+    width: fit-content;
+	background: $white;
+	position: relative;
+	left: 95%;
+	transform: translateX(-100%);
+	padding: 40px 0 40px 50px;
+	background: rgb(20,21,24);
+	background: linear-gradient(90deg, rgba(20,21,24,1) 0%, rgba(33,41,66,1) 100%);
+	border-radius: 50px 0 0 50px;
+
+	@include tablets{
+		left: 105%;
+	}
+
+	&:after{
+		content: '';
+		position: absolute;
+		display: block;
+		background: rgba(33,41,66,1);
+		width: 1000%;
+		height: 100%;
+		top: 0;
+		right: -1000%;
+
+		@include tablets{
+			right: -999%;
+		}
+	}
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.close{
+	cursor: pointer;
+
+	@include tablets{
+		margin-right: 5px;
+	}
+}
+
+.input__wrap{
+	position: relative;
+	margin-bottom: 30px;
+
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 1000%;
+		height: 100%;
+		background: $white;
+		top: 0;
+		right: -1000%;
+		z-index: 10;
+
+		@include tablets{
+			right: -998%;
+		}
+	}
+
+	&--textarea{
+		margin: 10px 0 40px;
+
+		textarea{
+			height: 170px;
+		}
+	}
+
+	&--textarea:after{
+		right: -997%;
+		height: 97%;
+	}
+}
+
+.modal-open, .modal-open2, .modal-open3, .modal-open4, .modal-open5, .modal-open6, .modal-open7{
+	
+	@include tablets{
+		border-radius: 100px;
+		padding: 20px 30px;
+		position: absolute;
+		bottom: 5%;
+	}
+
+	&:after{
+
+		@include tablets{
+			display: none;
+		}
+	}
+}

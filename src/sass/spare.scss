@@ -1,0 +1,74 @@
+.part{
+	position: relative;
+
+	@include tablets{
+		height: 100%;
+	}
+
+	&__wrap{
+		display: flex;
+
+		@include tablets{
+			flex-direction: column-reverse;
+			align-items: center;
+			height: 100%;
+			justify-content: center;
+		}
+	}
+
+	&__img-wrap{
+		position: relative;
+
+		@include tablets{
+			margin-top: 100px;
+		}
+	}
+
+	&__img{
+		width: 750px;
+		float: right;
+
+		@include tablets{
+			width: 450px;
+		}
+	}
+
+	&__descr-wrap{
+		position: absolute;
+		right: 0;
+		padding-top: 210px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+
+		@include tablets{
+			width: 103%;
+			top: -10%;
+			height: 100%;
+			align-items: center;
+		}
+	}
+
+	&__descr{
+		font-size: 24px;
+		color: $gray;
+		font-style: italic;
+		margin-top: 30px;
+
+		@include tablets{
+			position: absolute;
+			top: 40%;
+			display: block;
+			width: 100%;
+			text-align: center;
+			font-size: 18px;
+			color: #c2c2c2;
+		}
+	}
+}
+
+  
+.detail {
+	position: absolute;
+	width: 100%;
+}
